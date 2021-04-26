@@ -51,6 +51,20 @@
     overflow: hidden;
 }
 
+@media (min-width: 1000px) {
+    .page-header,
+    .main-content {
+        width: 960px;
+        margin: 0 auto;
+    }
+    .page-header__motto {
+        margin: 0 auto;
+    }
+    .page-footer__copyright {
+        width: 960px;
+    }
+}
+
 .page-header {
     background-color: #FFFFFF;
 }
@@ -110,7 +124,7 @@
 
 .post {
     border: 2px solid #5E80FE;
-    border-radius: 10%;
+    border-radius: 10px;
     background: linear-gradient(360deg, rgba(75, 113, 255, 0) -0.13%, rgba(107, 137, 248, 0.4) 131.12%);
     margin: 15px 15px;
 }
@@ -161,7 +175,6 @@
 
 
 .post-content__like-button--heart {
-    display: block;
     position: absolute;
     top: 8px;
     left: 10px;
@@ -197,6 +210,51 @@
     opacity: 0.7;
 }
 
+.comments__headline {
+    color: #3D4F9F;
+    font-size: 20px;
+    margin: 25px;
+}
+
+.comment {
+    border: 2px solid green; 
+    border-radius: 5px;
+    background-color: #ffcfdf;
+    background-image: linear-gradient(315deg, #ffcfdf 0%, #b0f3f1 74%);
+    margin: 15px 15px;
+}
+.comment__title {
+    color: #2F4F4F;
+    text-align: center;
+    font-size: 18px;
+}
+
+.comment__author-contacts {
+    color: #2F4F4F;
+    font-size: 12px;
+    margin-left: 20px;
+}
+
+.comment__author-content {
+    color: #2F4F4F;
+    font-size: 14px;
+    line-height: 21px;
+    margin-left: 20px;
+}
+
+.comments__back {
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #D2E1FF;
+    outline: none;
+    border-width: 2px;
+    height: 35px;
+    border-radius: 8px;
+    border-color: #0000FF;
+    color: rgba(58, 121, 255, 0.7);
+    margin-left: 20px;
+}
+
 .pagination {
     display: flex;
     justify-content: center;
@@ -228,21 +286,26 @@
 }
 
 .pagination__button-next:hover, 
-.pagination__button-back:hover {
+.pagination__button-back:hover,
+.comments__back:hover {
     background-color: #0000FF;
     color: #D2E1FF;
 }
 
 .pagination__button-next:active, 
-.pagination__button-back:active {
+.pagination__button-back:active,
+.comments__back:active {
     opacity: 0.7;
 }
-
+.page-footer {
+    width: 100%;
+    background: linear-gradient(229.32deg, #6888FF 12.77%, #5E80FF 73.11%);
+    margin-top: 20px;
+}
 .page-footer__copyright {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
-    background: linear-gradient(229.32deg, #6888FF 12.77%, #5E80FF 73.11%);
+    margin: 0 auto;
 }
 
 .page-footer__author-name {
@@ -260,4 +323,8 @@
     font-weight: bold;
     color: #F0FFFF;
     margin-right: 10px;
+}
+
+.search-color {
+    background-color: yellow;
 }
